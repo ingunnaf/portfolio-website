@@ -1,0 +1,57 @@
+.home-main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-wrapper img{
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+    border-radius: 50%;
+    width: 251px;
+    height: 230px;
+}
+
+.main-intro {
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    font-family: Andada Pro, sans-serif;;
+    color: #E0E0E0;
+}
+
+.sub-intro {
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+.contact-logos ul{
+    display: flex;
+    margin-bottom: 4rem;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-logos a{
+    color: inherit;
+    text-decoration: none;
+    padding: 2rem;
+   
+}
+.contact-logos a img{
+    max-height: 50px;
+    max-width: 50px;
+   
+}
+
+/* Need to change this to instead change the whole image to a grey version when they are hovered over*/
+.contact-logos a:hover {
+    color: #adadad;
+}

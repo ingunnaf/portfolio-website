@@ -1,0 +1,49 @@
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    font-family: Inter, sans-serif;
+    font-size: 1.7rem;
+    color: black;
+    width: 100vw;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.skills-headline-box {
+    background-color: #667C26;
+    width: 100vw;
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    margin: 60px;
+    font-family: Andada Pro, sans-serif;;
+    color: #E0E0E0;
+    text-align: center;
+    line-height: 50px;
+}
+
+.skills-logos ul{
+    display: flex;
+    margin-bottom: 4rem;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-logos a{
+    color: inherit;
+    text-decoration: none;
+    padding: 2rem;
+   
+}
+.skills-logos img{
+    max-height: 50px;
+    max-width: 50px;
+   
+}
