@@ -58,6 +58,7 @@
 }
 
 .portfolio-list img{
+    border-radius: 20%;
     max-height: 400px;
     max-width: 550px;
    
