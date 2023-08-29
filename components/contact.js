@@ -41,7 +41,7 @@ export default function Contact() {
     <div className="p-4">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col">
-          <label className="text-left mb-2">Name</label>
+          <label className="text-left mb-2">Name:</label>
           <input
             type="text"
             value={formData.name}
@@ -50,7 +50,7 @@ export default function Contact() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-left mb-2">Email</label>
+          <label className="text-left mb-2">Email:</label>
           <input
             type="email"
             value={formData.email}
@@ -59,7 +59,7 @@ export default function Contact() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-left mb-2">Message</label>
+          <label className="text-left mb-2">Message:</label>
           <textarea 
             ref={textAreaRef} 
             value={formData.message} 

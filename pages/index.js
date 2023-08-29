@@ -88,13 +88,13 @@ export default function Home() {
             </p>
             <div className="text-5xl flex justify-center gap-16 py-3 text-rose-900">
               <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
+                <a href="mailto:ingunn.flovig@gmail.com"><AiFillMail /></a>
+              </div>
+              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
               <a href="https://github.com/ingunnaf"><AiFillGithub /></a>
               </div>
               <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
                 <a href="https://www.linkedin.com/in/ingunnflovig/"><AiFillLinkedin /></a>
-              </div>
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-                <a href="mailto:ingunn.flovig@gmail.com"><AiFillMail /></a>
               </div>
             </div>
             
@@ -268,7 +268,6 @@ export default function Home() {
             </div>
 
           </div>
-        
         </section>
         </div>
 
@@ -277,25 +276,17 @@ export default function Home() {
             <div className=" flex justify-center gap-16 py-3 ">
               <h3 className="text-lg font-medium pt-8 pb-2 text-indigo-700">Get in touch via email or go to my socials with the links below.</h3>    
             </div>
-            <div className="bg-rose-100 md:px-20 lg:px-40 px-10">
-          <section>
-            <div>
-              <Contact></Contact>
-            </div>
-          </section>
-        </div>
-            <div className="text-5xl flex justify-center gap-16 py-3 pb-10 text-rose-900">
-            <div className="text-5xl flex justify-center gap-16 py-3 text-rose-900">
+
+            <div className="text-5xl flex justify-center gap-16 py-3 text-rose-900 pb-10">
+              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
+                <a href="mailto:ingunn.flovig@gmail.com"><AiFillMail /></a>
+              </div>
               <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
               <a href="https://github.com/ingunnaf"><AiFillGithub /></a>
               </div>
               <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
                 <a href="https://www.linkedin.com/in/ingunnflovig/"><AiFillLinkedin /></a>
               </div>
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-                <a href="mailto:ingunn.flovig@gmail.com"><AiFillMail /></a>
-              </div>
-            </div>
             </div>
 
           </section>
