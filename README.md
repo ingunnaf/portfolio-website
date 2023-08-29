@@ -6,3 +6,11 @@
 [Click here](https://ingunnaf.github.io) to go to my website, or enter this url in your browser:
 
 ingunnaf.github.io
+
+
+## How to run the project
+
+```
+npm install
+npm run dev
+```
