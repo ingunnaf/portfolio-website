@@ -1,12 +1,10 @@
 import Head from "next/head";
-import { FaFlagDe } from 'react-icons/fa';
 import {
   AiFillLinkedin,
   AiFillGithub,
   AiFillMail
 } from "react-icons/ai";
 import { Link, animateScroll as scroll } from "react-scroll";
-import Contact from '../components/contact';
 import { SiC, SiDocker, SiGooglecloud, 
          SiJavascript, 
          SiKubernetes,
@@ -35,18 +33,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=" bg-white-500" >
-        <div className="bg-rose-100 md:px-20 lg:px-40 px-10">
+        <div className="bg-rose-100 md:px-20 lg:px-40 px-1">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between ">
+          <nav className="py-10 mb-12 flex justify-between">
             <ul className="flex items-center">
-                <li>
-                  <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out text-rose-900">
-                  <a className="text-2xl bg-gradient-to-r px-4 py-2 border-none rounded-md ml-8"
-                  >
-                    Home
-                  </a>
-                  </div>
-                </li>
+  
                 <li>
                   <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out text-rose-900">
                   <Link className="text-2xl bg-gradient-to-r px-4 py-2 border-none rounded-md ml-8"
@@ -69,14 +60,14 @@ export default function Home() {
                     offset={0}
                     duration={500}
                   >
-                    My Toolbox
+                    Toolbox
                   </Link>
                   </div>
                 </li>
              
             </ul>
           </nav>
-          <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-50 h-50 relative overflow-hidden mt-20 md:h-72 md:w-72" id="home" >
+          <div className="mx-auto rounded-full w-50 h-50 relative overflow-hidden md:mt-20 md:h-72 md:w-72 h-36 w-36" id="home" >
               <Image src={ingunn} layout="fill" objectFit="cover" />
             </div>
           <div className="text-center p-10 py-10">
@@ -109,7 +100,7 @@ export default function Home() {
               Over the years, I've built numerous student and personal projects. Here you can find some of my favourites and all the most recent ones.
             </p>
           </div>
-          <div className="flex flex-wrap gap-10 py-10">
+          <div className="flex flex-col flex-wrap sm:flex-row gap-10 py-10">
           
           <PortfolioBox
             title={"Elastic Scaling of a Microservice Application"}
@@ -147,12 +138,12 @@ export default function Home() {
         </section>
         </div>
 
-        <div className="md:px-20 lg:px-40 px-10" id="my-toolbox">
+        <div className="md:px-20 lg:px-40 px-10 mb-10" id="my-toolbox">
         <section>
-            <h3 className="text-3xl py-1 text-indigo-700">My Toolbox</h3>
+            <h3 className="text-3xl py-1 text-indigo-700">Toolbox</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">I've used numerous languages and tools in my projects, but these are the ones I am most proficient with.</p>
           
-          <div className="flex flex-row">
+          <div className="flex flex-wrap sm:flex-row">
 
             <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
               <div className="flex flex-col justify-center items-center">
@@ -169,15 +160,6 @@ export default function Home() {
                 <SiPython />
                 </div>
                 <h3 className="text-lg font-medium text-center">Python & Flask</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                <SiJavascript />
-                </div>
-                <h3 className="text-lg font-medium text-center">Javascript</h3>
               </div>
             </div>
 
@@ -217,19 +199,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiGooglecloud />
-                </div>
-                <h3 className="text-lg font-medium text-center">Google Cloud</h3>
-              </div>
-            </div>
-
           </div>
 
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">I also use these sometimes, but with a higher frequency of Stackoverflow visits and ChatGPT queries.</p>
-          <div className="flex flex-row">
+          <div className="flex flex-wrap sm:flex-row">
 
             <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
               <div className="flex flex-col justify-center items-center">
@@ -267,11 +240,29 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
+              <div className="flex flex-col justify-center items-center">
+                <div className="text-4xl text-rose-900 mb-2">
+                <SiJavascript />
+                </div>
+                <h3 className="text-lg font-medium text-center">Javascript</h3>
+              </div>
+            </div>
+
+            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
+              <div className="flex flex-col justify-center items-center">
+                <div className="text-4xl text-rose-900 mb-2">
+                  <SiGooglecloud />
+                </div>
+                <h3 className="text-lg font-medium text-center">Google Cloud</h3>
+              </div>
+            </div>
+
           </div>
         </section>
         </div>
 
-        <div className="bg-rose-100 md:px-20 lg:px-40 px-10">
+        <div className="bg-rose-100 md:px-20 lg:px-40 px-10 ">
           <section>
             <div className=" flex justify-center gap-16 py-3 ">
               <h3 className="text-lg font-medium pt-8 pb-2 text-indigo-700">Get in touch via email or go to my socials with the links below.</h3>    
