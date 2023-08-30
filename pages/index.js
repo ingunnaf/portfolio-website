@@ -6,11 +6,13 @@ import {
 } from "react-icons/ai";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { SiC, SiDocker, SiGooglecloud, 
+         SiJava, 
          SiJavascript, 
          SiKubernetes,
          SiMongodb,
          SiMysql,
          SiPostgresql,
+         SiPrometheus,
          SiPython,
          SiReact,
          SiSpringboot,
@@ -106,29 +108,34 @@ export default function Home() {
             title={"Elastic Scaling of a Microservice Application"}
             aboutProject={"Implemented Prometheus metric collection for our bottleneck microservices, and autoscaling with KEDA."}
             imagePath={"/../public/microservice2.jpg"}
+            icons={[SiGooglecloud, SiKubernetes, SiPrometheus]}
           ></PortfolioBox>
 
           <PortfolioBox
             title={"Mensa Telegram Bot"}
             aboutProject={"Fetches the weekly menu from the Mensa (German cafeteria) and sends it to you once a week."}
             imagePath={"/../public/telegram-bot.png"}
+            icons={[SiPython]}
           ></PortfolioBox>
 
           <PortfolioBox
             title={"6G Dashboard - Backend"}
             aboutProject={"Built the backend for a dashboard that allows monitoring 6G components and their communication."}
             imagePath={"/../public/dashboard.jpg"}
+            icons={[SiJava, SiSpringboot, SiDocker]}
           ></PortfolioBox>
           
           <PortfolioBox
             title={"Sustainability Portal - Backend"}
             aboutProject={"A Sustainability Portal developed for the Norwegian Brønnøysundsregistrene - showcasing public data about sustainability in the fish farming industry in Norway."}
             imagePath={"/../public/baerekraft2.jpeg"}
+            icons={[SiPython, SiPostgresql, SiDocker]}
           ></PortfolioBox>
           <PortfolioBox
             title={"Expendibots AI Algorithm"}
             aboutProject={"An algorithm that plays the game expendibots. Uses depth first search to search for an advantageous future game state using heuristic evaluation of game states to limit the search space."}
             imagePath={"/../public/algorithm.jpg"}
+            icons={[SiPython]}
           ></PortfolioBox>
 
 

@@ -9,6 +9,7 @@ export default function PortfolioBox({
     title,
     aboutProject,
     imagePath,
+    icons = [],
   }) {
     return (
         
@@ -17,10 +18,8 @@ export default function PortfolioBox({
                     <div className="flex-1 p-2">
                         <h3 className="text-lg font-medium pt-8 pb-2 text-rose-900">{title}</h3>
                         <p>{aboutProject}</p>
-                        <div className="flex text-4xl justify-left gap-16 py-3 text-rose-900">
-                            <SiGooglecloud />
-                            <SiKubernetes />
-                            <SiPrometheus />    
+                        <div className="icon-container flex text-4xl justify-left gap-16 py-3 text-rose-900">
+                            {icons.length > 0 && icons.map((Icon, index) => <Icon key={index} />)}
                         </div>
                     </div>
 
