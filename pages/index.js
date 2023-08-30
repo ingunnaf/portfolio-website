@@ -78,6 +78,7 @@ export default function Home() {
               aboutProject={"Implemented Prometheus metric collection for our bottleneck microservices, and autoscaling with KEDA."}
               imagePath={microservice}
               icons={[SiGooglecloud, SiKubernetes, SiPrometheus]}
+              link="https://git.tu-berlin.de/cnae-group-8/robot-shop-performance-scalability"
             ></PortfolioBox>
 
             <PortfolioBox
@@ -85,6 +86,7 @@ export default function Home() {
               aboutProject={"Fetches the weekly menu from the Mensa (German cafeteria) and sends it to you once a week."}
               imagePath={telegrambot}
               icons={[SiPython]}
+              link="https://github.com/ingunnaf/mensa_bot"
             ></PortfolioBox>
 
             <PortfolioBox
@@ -92,6 +94,7 @@ export default function Home() {
               aboutProject={"Built the backend for a dashboard that allows monitoring 6G components and their communication."}
               imagePath={dashboard}
               icons={[SiJava, SiSpringboot, SiDocker]}
+              link="https://git.tu-berlin.de/sandro/iosl_ss23"
             ></PortfolioBox>
             
             <PortfolioBox
@@ -99,6 +102,7 @@ export default function Home() {
               aboutProject={"A Sustainability Portal developed for the Norwegian Brønnøysundsregistrene - showcasing public data about sustainability in the fish farming industry in Norway."}
               imagePath={baerekraft}
               icons={[SiPython, SiPostgresql, SiDocker]}
+              link="https://github.com/brreg/sommercamp2022"
             ></PortfolioBox>
 
           </div>
@@ -125,12 +129,12 @@ export default function Home() {
           <p className="less-familiar-technologies text-md py-2 leading-8 text-gray-800">I also use these sometimes, but with a higher frequency of Stackoverflow visits and ChatGPT queries.</p>
           <div className="flex flex-wrap sm:flex-row">
 
-          <Techbox name="C" icon={SiC}></Techbox>
-          <Techbox name="React" icon={SiReact}></Techbox>
-          <Techbox name="Vue" icon={SiVuedotjs}></Techbox>
-          <Techbox name="MySQL" icon={SiMysql}></Techbox>
-          <Techbox name="Javascript" icon={SiJavascript}></Techbox>
-          <Techbox name="Google Cloud" icon={SiGooglecloud}></Techbox>
+            <Techbox name="C" icon={SiC}></Techbox>
+            <Techbox name="React" icon={SiReact}></Techbox>
+            <Techbox name="Vue" icon={SiVuedotjs}></Techbox>
+            <Techbox name="MySQL" icon={SiMysql}></Techbox>
+            <Techbox name="Javascript" icon={SiJavascript}></Techbox>
+            <Techbox name="Google Cloud" icon={SiGooglecloud}></Techbox>
 
           </div>
         </section>

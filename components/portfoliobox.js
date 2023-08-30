@@ -10,10 +10,11 @@ export default function PortfolioBox({
     aboutProject,
     imagePath,
     icons = [],
+    link,
   }) {
     return (
         
-            <div id="portfoliobox" className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-col sm:flex-row items-center bg-indigo-50 rounded-lg p-4" >
+            <a id="portfoliobox" href={link} className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-col sm:flex-row items-center bg-indigo-50 rounded-lg p-4" >
                     
                     <div className="flex-1 p-2">
                         <h3 className="text-lg font-medium pt-8 pb-2 text-rose-900">{title}</h3>
@@ -30,6 +31,6 @@ export default function PortfolioBox({
                         layout="fixed"
                         src={imagePath}
                     />
-            </div>
+            </a>
         );
 }
