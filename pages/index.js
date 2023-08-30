@@ -1,10 +1,4 @@
 import Head from "next/head";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillMail
-} from "react-icons/ai";
-import { Link, animateScroll as scroll } from "react-scroll";
 import { SiC, SiDocker, SiGooglecloud, 
          SiJava, 
          SiJavascript, 
@@ -27,11 +21,9 @@ import telegrambot from "../public/telegram-bot.png";
 import Image from "next/image";
 import PortfolioBox from "../components/portfoliobox";
 import NavbarEl from "../components/navbarEl";
-import { useState } from "react";
-
+import SocialIcons from "../components/socialIcons";
+import Techbox from "../components/techbox";
 export default function Home() {
-  const [activeTab, setActiveTab] = useState('home');
-
 
   return (
     <div>
@@ -65,17 +57,7 @@ export default function Home() {
             <p className="text-md py-5 leading-8 text-gray-800 max-w-xl mx-auto md:text-xl">
             I'm an incubating Software Engineer currently pursuing a Master of Computer Science at TU Berlin. You can find me at the bouldering gym or in the nearest lake.
             </p>
-            <div className="text-5xl flex justify-center gap-16 py-3 text-rose-900">
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-                <a href="mailto:ingunn.flovig@gmail.com"><AiFillMail /></a>
-              </div>
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-              <a href="https://github.com/ingunnaf"><AiFillGithub /></a>
-              </div>
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-                <a href="https://www.linkedin.com/in/ingunnflovig/"><AiFillLinkedin /></a>
-              </div>
-            </div>
+            <SocialIcons></SocialIcons>
             
           </div>
         </section>
@@ -84,188 +66,82 @@ export default function Home() {
         <section className="py-10">
           <div>
             <h3 className="text-3xl py-1 text-indigo-700">Projects</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            <p className="text-md py-2 leading-8 text-gray-800">
               Over the years, I've built numerous student and personal projects. Here you can find some of my favourites and all the most recent ones.
             </p>
           </div>
+
           <div className="flex flex-col flex-wrap sm:flex-row gap-10 py-10">
           
-          <PortfolioBox
-            title={"Elastic Scaling of a Microservice Application"}
-            aboutProject={"Implemented Prometheus metric collection for our bottleneck microservices, and autoscaling with KEDA."}
-            imagePath={microservice}
-            icons={[SiGooglecloud, SiKubernetes, SiPrometheus]}
-          ></PortfolioBox>
+            <PortfolioBox
+              title={"Elastic Scaling of a Microservice Application"}
+              aboutProject={"Implemented Prometheus metric collection for our bottleneck microservices, and autoscaling with KEDA."}
+              imagePath={microservice}
+              icons={[SiGooglecloud, SiKubernetes, SiPrometheus]}
+            ></PortfolioBox>
 
-          <PortfolioBox
-            title={"Mensa Telegram Bot"}
-            aboutProject={"Fetches the weekly menu from the Mensa (German cafeteria) and sends it to you once a week."}
-            imagePath={telegrambot}
-            icons={[SiPython]}
-          ></PortfolioBox>
+            <PortfolioBox
+              title={"Mensa Telegram Bot"}
+              aboutProject={"Fetches the weekly menu from the Mensa (German cafeteria) and sends it to you once a week."}
+              imagePath={telegrambot}
+              icons={[SiPython]}
+            ></PortfolioBox>
 
-          <PortfolioBox
-            title={"6G Dashboard - Backend"}
-            aboutProject={"Built the backend for a dashboard that allows monitoring 6G components and their communication."}
-            imagePath={dashboard}
-            icons={[SiJava, SiSpringboot, SiDocker]}
-          ></PortfolioBox>
-          
-          <PortfolioBox
-            title={"Sustainability Portal - Backend"}
-            aboutProject={"A Sustainability Portal developed for the Norwegian Brønnøysundsregistrene - showcasing public data about sustainability in the fish farming industry in Norway."}
-            imagePath={baerekraft}
-            icons={[SiPython, SiPostgresql, SiDocker]}
-          ></PortfolioBox>
-
+            <PortfolioBox
+              title={"6G Dashboard - Backend"}
+              aboutProject={"Built the backend for a dashboard that allows monitoring 6G components and their communication."}
+              imagePath={dashboard}
+              icons={[SiJava, SiSpringboot, SiDocker]}
+            ></PortfolioBox>
+            
+            <PortfolioBox
+              title={"Sustainability Portal - Backend"}
+              aboutProject={"A Sustainability Portal developed for the Norwegian Brønnøysundsregistrene - showcasing public data about sustainability in the fish farming industry in Norway."}
+              imagePath={baerekraft}
+              icons={[SiPython, SiPostgresql, SiDocker]}
+            ></PortfolioBox>
 
           </div>
           
         </section>
         </div>
 
-        <div className="md:px-20 lg:px-40 px-10 mb-10" id="my-toolbox">
+        <div id="my-toolbox" className="md:px-20 lg:px-40 px-10 mb-10">
         <section>
             <h3 className="text-3xl py-1 text-indigo-700">Toolbox</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">I've used numerous languages and tools in my projects, but these are the ones I am most proficient with.</p>
+            <p className="text-md py-2 leading-8 text-gray-800">I've used numerous languages and tools in my projects, but these are the ones I am most proficient with.</p>
           
-          <div className="flex flex-wrap sm:flex-row">
+          <div className="familiar-technologies flex flex-wrap sm:flex-row">
 
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                <SiSpringboot />
-                </div>
-                <h3 className="text-lg font-medium text-center">Java & Springboot</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                <SiPython />
-                </div>
-                <h3 className="text-lg font-medium text-center">Python & Flask</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiPostgresql />
-                </div>
-                <h3 className="text-lg font-medium text-center">PostgreSQL</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiMongodb />
-                </div>
-                <h3 className="text-lg font-medium text-center">MongoDB</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiDocker />
-                </div>
-                <h3 className="text-lg font-medium text-center">Docker</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                <SiKubernetes />
-                </div>
-                <h3 className="text-lg font-medium text-center">Kubernetes</h3>
-              </div>
-            </div>
+            <Techbox name="Java & Springboot" icon={SiSpringboot}></Techbox>
+            <Techbox name="Python & Flask" icon={SiPython}></Techbox>
+            <Techbox name="Postgresql" icon={SiPostgresql}></Techbox>
+            <Techbox name="Mongodb" icon={SiMongodb}></Techbox>
+            <Techbox name="Docker" icon={SiDocker}></Techbox>
+            <Techbox name="Kubernetes" icon={SiKubernetes}></Techbox>
 
           </div>
 
-          <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">I also use these sometimes, but with a higher frequency of Stackoverflow visits and ChatGPT queries.</p>
+          <p className="less-familiar-technologies text-md py-2 leading-8 text-gray-800">I also use these sometimes, but with a higher frequency of Stackoverflow visits and ChatGPT queries.</p>
           <div className="flex flex-wrap sm:flex-row">
 
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiC />
-                </div>
-                <h3 className="text-lg font-medium text-center">C</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiReact />
-                </div>
-                <h3 className="text-lg font-medium text-center">React</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiVuedotjs />
-                </div>
-                <h3 className="text-lg font-medium text-center">Vue</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiMysql />
-                </div>
-                <h3 className="text-lg font-medium text-center">MySQL</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                <SiJavascript />
-                </div>
-                <h3 className="text-lg font-medium text-center">Javascript</h3>
-              </div>
-            </div>
-
-            <div className="border rounded-lg p-4 transition duration-300 ease-in-out transform hover:shadow-lg flex flex-row justify-center items-center bg-indigo-50 rounded-lg p-4 pb-3 mb-5 mr-5" style={{ width: '125px' }}>
-              <div className="flex flex-col justify-center items-center">
-                <div className="text-4xl text-rose-900 mb-2">
-                  <SiGooglecloud />
-                </div>
-                <h3 className="text-lg font-medium text-center">Google Cloud</h3>
-              </div>
-            </div>
+          <Techbox name="C" icon={SiC}></Techbox>
+          <Techbox name="React" icon={SiReact}></Techbox>
+          <Techbox name="Vue" icon={SiVuedotjs}></Techbox>
+          <Techbox name="MySQL" icon={SiMysql}></Techbox>
+          <Techbox name="Javascript" icon={SiJavascript}></Techbox>
+          <Techbox name="Google Cloud" icon={SiGooglecloud}></Techbox>
 
           </div>
         </section>
         </div>
 
-        <div className="bg-rose-100 md:px-20 lg:px-40 px-10 ">
+        <div className="footer bg-rose-100 md:px-20 lg:px-40 px-10 ">
           <section>
             <div className=" flex justify-center gap-16 py-3 ">
               <h3 className="text-lg font-medium pt-8 pb-2 text-indigo-700">Get in touch via email or go to my socials with the links below.</h3>    
             </div>
-
-            <div className="text-5xl flex justify-center gap-16 py-3 text-rose-900 pb-10">
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-                <a href="mailto:ingunn.flovig@gmail.com"><AiFillMail /></a>
-              </div>
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-              <a href="https://github.com/ingunnaf"><AiFillGithub /></a>
-              </div>
-              <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out">
-                <a href="https://www.linkedin.com/in/ingunnflovig/"><AiFillLinkedin /></a>
-              </div>
-            </div>
-
+            <SocialIcons></SocialIcons>
           </section>
         </div>
         
