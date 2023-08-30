@@ -19,8 +19,14 @@ import { SiC, SiDocker, SiGooglecloud,
          SiVuedotjs
 } from "react-icons/si";
 import ingunn from "../public/portfolio2.jpeg";
+import microservice from "../public/microservice2.jpg";
+import dashboard from "../public/dashboard.jpg";
+import baerekraft from "../public/baerekraft2.jpeg";
+import telegrambot from "../public/telegram-bot.png";
+
 import Image from "next/image";
 import PortfolioBox from "../components/portfoliobox";
+import NavbarEl from "../components/navbarEl";
 import { useState } from "react";
 
 export default function Home() {
@@ -39,32 +45,12 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <ul className="flex items-center">
-  
+
                 <li>
-                  <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out text-rose-900">
-                  <Link className="text-2xl bg-gradient-to-r px-4 py-2 border-none rounded-md ml-8"
-                    to="my-projects"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                  >
-                    Projects
-                  </Link>
-                  </div>
+                  <NavbarEl name="Projects" linksTo="my-projects"></NavbarEl>
                 </li>
                 <li>
-                  <div className="hover:text-indigo-700 hover:scale-110 transition duration-300 ease-in-out text-rose-900">
-                  <Link className="text-2xl bg-gradient-to-r px-4 py-2 border-none rounded-md ml-8"
-                    to="my-toolbox"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                  >
-                    Toolbox
-                  </Link>
-                  </div>
+                  <NavbarEl name="Toolbox" linksTo="my-toolbox"></NavbarEl>
                 </li>
              
             </ul>
@@ -107,37 +93,30 @@ export default function Home() {
           <PortfolioBox
             title={"Elastic Scaling of a Microservice Application"}
             aboutProject={"Implemented Prometheus metric collection for our bottleneck microservices, and autoscaling with KEDA."}
-            imagePath={"/../public/microservice2.jpg"}
+            imagePath={microservice}
             icons={[SiGooglecloud, SiKubernetes, SiPrometheus]}
           ></PortfolioBox>
 
           <PortfolioBox
             title={"Mensa Telegram Bot"}
             aboutProject={"Fetches the weekly menu from the Mensa (German cafeteria) and sends it to you once a week."}
-            imagePath={"/../public/telegram-bot.png"}
+            imagePath={telegrambot}
             icons={[SiPython]}
           ></PortfolioBox>
 
           <PortfolioBox
             title={"6G Dashboard - Backend"}
             aboutProject={"Built the backend for a dashboard that allows monitoring 6G components and their communication."}
-            imagePath={"/../public/dashboard.jpg"}
+            imagePath={dashboard}
             icons={[SiJava, SiSpringboot, SiDocker]}
           ></PortfolioBox>
           
           <PortfolioBox
             title={"Sustainability Portal - Backend"}
             aboutProject={"A Sustainability Portal developed for the Norwegian Brønnøysundsregistrene - showcasing public data about sustainability in the fish farming industry in Norway."}
-            imagePath={"/../public/baerekraft2.jpeg"}
+            imagePath={baerekraft}
             icons={[SiPython, SiPostgresql, SiDocker]}
           ></PortfolioBox>
-          <PortfolioBox
-            title={"Expendibots AI Algorithm"}
-            aboutProject={"An algorithm that plays the game expendibots. Uses depth first search to search for an advantageous future game state using heuristic evaluation of game states to limit the search space."}
-            imagePath={"/../public/algorithm.jpg"}
-            icons={[SiPython]}
-          ></PortfolioBox>
-
 
 
           </div>
