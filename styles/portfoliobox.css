@@ -1,12 +1,12 @@
 /* Style for large screens */
 #portfoliobox {
-  width: calc(50% - 20px);/*!important;*/
+  width: calc(50% - 20px);
 }
 
   
 /* Media Query for smaller screens */
 @media screen and (max-width: 640px) {
   #portfoliobox {
-    width: 100%;/* !important;*/
+    width: 100%;
   }
 }
