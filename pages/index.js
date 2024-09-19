@@ -13,7 +13,7 @@ import { SiC, SiDocker, SiGooglecloud,
          SiEthereum,
          SiGitlab
 } from "react-icons/si";
-import ingunn from "../public/portfolio2.jpeg";
+import ingunn from "../public/self-photo.jpg";
 import apache from "../public/apachelogo.jpeg";
 import microservice from "../public/microservice2.jpg";
 import dashboard from "../public/dashboard.jpg";
