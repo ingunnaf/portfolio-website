@@ -4,15 +4,17 @@ import { SiC, SiDocker, SiGooglecloud,
          SiJavascript, 
          SiKubernetes,
          SiMongodb,
-         SiMysql,
          SiPostgresql,
          SiPrometheus,
          SiPython,
          SiReact,
          SiSpringboot,
-         SiVuedotjs
+         SiAmazonaws,
+         SiEthereum,
+         SiGitlab
 } from "react-icons/si";
-import ingunn from "../public/portfolio2.jpeg";
+import ingunn from "../public/self-photo.jpg";
+import apache from "../public/apachelogo.jpeg";
 import microservice from "../public/microservice2.jpg";
 import dashboard from "../public/dashboard.jpg";
 import baerekraft from "../public/baerekraft2.jpeg";
@@ -72,10 +74,26 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col flex-wrap sm:flex-row gap-10 py-10">
+
+            <PortfolioBox
+              title={"Apache SystemDS"}
+              aboutProject={"Implemented caching for re-use of partial build products in recode and binning to speed up feature transformations."}
+              imagePath={apache}
+              icons={[]}
+              link="https://github.com/apache/systemds/pull/2036"
+            ></PortfolioBox>
+
+            <PortfolioBox
+              title={"Decentralized Sports Club"}
+              aboutProject={"Full stack blockchain app for peer to peer sports offerings, built with Hardhat, with Smart Contracts deployed to the Ethereum chain."}
+              imagePath={microservice}
+              icons={[SiEthereum, SiJavascript]}
+              link="https://github.com/ingunnaf/decentralized-sports-club"
+            ></PortfolioBox>
           
             <PortfolioBox
               title={"Elastic Scaling of a Microservice Application"}
-              aboutProject={"Implemented Prometheus metric collection for our bottleneck microservices, and autoscaling with KEDA."}
+              aboutProject={"Implemented Prometheus metric collection for a microservice application, and autoscaling with KEDA."}
               imagePath={microservice}
               icons={[SiGooglecloud, SiKubernetes, SiPrometheus]}
               link="https://git.tu-berlin.de/cnae-group-8/robot-shop-performance-scalability"
@@ -90,7 +108,7 @@ export default function Home() {
             ></PortfolioBox>
 
             <PortfolioBox
-              title={"6G Dashboard - Backend"}
+              title={"6G Dashboard"}
               aboutProject={"Built the backend for a dashboard that allows monitoring 6G components and their communication."}
               imagePath={dashboard}
               icons={[SiJava, SiSpringboot, SiDocker]}
@@ -98,8 +116,8 @@ export default function Home() {
             ></PortfolioBox>
             
             <PortfolioBox
-              title={"Sustainability Portal - Backend"}
-              aboutProject={"A Sustainability Portal developed for the Norwegian Brønnøysundsregistrene - showcasing public data about sustainability in the fish farming industry in Norway."}
+              title={"Sustainability Portal"}
+              aboutProject={"A summer spent building a sustainability portal - showcasing public sustainability data from the fish farming industry in Norway."}
               imagePath={baerekraft}
               icons={[SiPython, SiPostgresql, SiDocker]}
               link="https://github.com/brreg/sommercamp2022"
@@ -117,12 +135,13 @@ export default function Home() {
           
           <div className="familiar-technologies flex flex-wrap sm:flex-row">
 
-            <Techbox name="Java & Springboot" icon={SiSpringboot}></Techbox>
-            <Techbox name="Python & Flask" icon={SiPython}></Techbox>
+            <Techbox name="Java" icon={SiJava}></Techbox>
+            <Techbox name="Python" icon={SiPython}></Techbox>
             <Techbox name="Postgresql" icon={SiPostgresql}></Techbox>
-            <Techbox name="Mongodb" icon={SiMongodb}></Techbox>
             <Techbox name="Docker" icon={SiDocker}></Techbox>
             <Techbox name="Kubernetes" icon={SiKubernetes}></Techbox>
+            <Techbox name="AWS" icon={SiAmazonaws}></Techbox>
+            <Techbox name="Gitlab CI/CD" icon={SiGitlab}></Techbox>
 
           </div>
 
@@ -131,10 +150,9 @@ export default function Home() {
 
             <Techbox name="C" icon={SiC}></Techbox>
             <Techbox name="React" icon={SiReact}></Techbox>
-            <Techbox name="Vue" icon={SiVuedotjs}></Techbox>
-            <Techbox name="MySQL" icon={SiMysql}></Techbox>
             <Techbox name="Javascript" icon={SiJavascript}></Techbox>
             <Techbox name="Google Cloud" icon={SiGooglecloud}></Techbox>
+            <Techbox name="Mongodb" icon={SiMongodb}></Techbox>
 
           </div>
         </section>
